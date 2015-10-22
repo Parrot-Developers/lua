@@ -50,7 +50,9 @@ LOCAL_SRC_FILES := src/lapi.c \
 	src/loadlib.c \
 	src/linit.c \
 
-LOCAL_CFLAGS=-DLUA_USE_LINUX
+LOCAL_CFLAGS := \
+	-DLUA_USE_LINUX \
+	-Wno-format-nonliteral
 
 LOCAL_LDLIBS := -ldl -lm
 
